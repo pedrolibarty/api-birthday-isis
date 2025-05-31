@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       .select("*")
       .eq("id_guest", id_guest)
       .order("name", { ascending: true });
-      
+
     if (error) {
       return res.status(500).json({ error: error.message });
     }
